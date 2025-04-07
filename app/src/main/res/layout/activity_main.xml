@@ -1,46 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:background="#F4F6F9">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Background Service"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
-
-    <EditText
-        android:id="@+id/editText_random"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="24sp"
-        android:enabled="false"
-        android:layout_marginBottom="24dp"/>
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <Button
-        android:onClick="startService"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start Background Service"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Background Service"
+            android:textSize="26sp"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
 
-    <Button
-        android:onClick="stopService"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Stop Background Service"
-        android:layout_marginTop="12dp"/>
+        <EditText
+            android:id="@+id/editText_random"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:enabled="false"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp" />
 
-    <Button
-        android:onClick="goToForeground"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Go to Foreground Activity"
-        android:layout_marginTop="24dp"/>
+        <Button
+            android:onClick="startService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Background Service"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
 
-</LinearLayout>
+        <Button
+            android:onClick="stopService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Background Service"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:onClick="goToForeground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Foreground Activity"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
